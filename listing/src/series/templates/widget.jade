@@ -1,0 +1,15 @@
+prefix = 'http://player.fm/series/e911-talk-podcast-10766/'
+.playerfm-widget
+  .playerfm-title= home
+  img.playerfm-image(src="http://a1.res.cloudinary.com/playerfm/image/fetch/c_fill,d_graymike-bg.png,h_90,w_90/"+imageURL)
+  table.episodes
+    each ep in episodes.slice(0,4)
+      tr.episode
+        td.main
+          a.title(href="#{prefix}#{ep.slug}")= ep.title
+          span.meta
+            span.ago= (Math.ceil(((+new Date)/1000 - ep.publishedAt)/24/60/60))+'d '
+            /
+            span.duration= Math.round(ep.duration/60)+'m'
+        td
+          a.play(href="#{ep.url}") &#9654;
