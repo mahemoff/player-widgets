@@ -21,7 +21,8 @@ log = -> console.log.apply console, arguments
 $ = jQuery
 $ ->
   log 'start'
-  $.get "#{HOST}/series/index.css", (css) -> injectCSS(css)
+  #$.get "#{HOST}/series/index.css", (css) -> injectCSS(css)
+  injectCSS(widgetCSS)
   $.getJSON URL, (series) ->
     log 'series', series
     html = Templating.tpl('widget.jade', series)
