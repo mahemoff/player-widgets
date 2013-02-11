@@ -1,7 +1,6 @@
 $ = null
-HOST = 'http://localhost:8000'
+#HOST = 'http://localhost:8000'
 widgetTemplate = null
-URL = 'http://player.fm/series/10766.jsonp?callback=?'
 
 # http://pastie.org/379693
 injectCSS = (newcss) ->
@@ -18,15 +17,51 @@ log = -> console.log.apply console, arguments
 
 ##############################################################################
 
+###
+demoTracks =
+  [
+    title: "Cro Magnon Man"
+    artist: "Crom"
+    mp3: "http://www.jplayer.org/audio/mp3/TSP-01-Cro_magnon_man.mp3"
+    poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+  ]
+###
+
 $ = jQuery
 $ ->
-  log 'start'
-  #$.get "#{HOST}/series/index.css", (css) -> injectCSS(css)
+  #url = $('a')'http://player.fm/series/10766.jsonp?callback=?'
+  resource = $('a.playerfm-widget').attr('href')
   injectCSS(widgetCSS)
-  $.getJSON URL, (series) ->
-    log 'series', series
-    html = Templating.tpl('widget.jade', series)
-    log 'html', html
-    $('<div/>')
-    .html(html)
-    .insertBefore('.playerfm-widget')
+  $('<div/>')
+  .html(Templating.tpl('widget.jade'))
+  .insertBefore('.playerfm-widget')
+  log "#{resource}.json?callback=?"
+  $.getJSON "#{resource}.jsonp?callback=?", (series) ->
+    tracks = setupTracks(series)
+    setupPlaylist(series, tracks)
+
+setupTracks = (series) ->
+  episodes = $.map series.episodes.slice(0,5), (ep) ->
+    [
+      title: ep.title,
+      artist: series.title,
+      mp3: ep.url,
+      poster: ep.image_url
+    ]
+
+setupPlaylist = (series, tracks) ->
+  playlist = new jPlayerPlaylist(
+    {
+      jPlayer: '#jp'
+      cssSelectorAncestor: '#jpc'
+    },
+      tracks,
+    {
+      playlistOptions: {
+        enableRemoveControls: true
+      },
+      swfPath: '/js',
+      supplied: 'mp3'
+    }
+  )
+
