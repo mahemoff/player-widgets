@@ -30,13 +30,20 @@ demoTracks =
 $ = jQuery
 $ ->
   #url = $('a')'http://player.fm/series/10766.jsonp?callback=?'
+  #a = $('<a/>').attr('href', $('script.playerfm-script').attr('src')).get(0)
+  #prefix = a.protocol + '//' + a.host + '/series/'
+  prefix = "https://dl.dropbox.com/u/8429420/player-widget/series/"
   resource = $('a.playerfm-widget').attr('href')
-  injectCSS(widgetCSS)
-  $('<div/>')
-  .html(Templating.tpl('widget.jade'))
-  .insertBefore('.playerfm-widget')
-  log "#{resource}.json?callback=?"
+  #log widgetCSS.replace(/url\("/g, 'url("'+prefix)
+  css = widgetCSS.replace(/url\("/g, 'url("'+prefix)
+  injectCSS css
   $.getJSON "#{resource}.jsonp?callback=?", (series) ->
+    log "Series response", series
+    $('<div/>')
+    .hide()
+    .html(Templating.tpl('widget.jade', series))
+    .insertBefore('.playerfm-widget')
+    .show()
     tracks = setupTracks(series)
     setupPlaylist(series, tracks)
 
@@ -50,10 +57,11 @@ setupTracks = (series) ->
     ]
 
 setupPlaylist = (series, tracks) ->
-  playlist = new jPlayerPlaylist(
+  log 'setup series', series, tracks
+  window.playlist = new jPlayerPlaylist(
     {
-      jPlayer: '#jp'
-      cssSelectorAncestor: '#jpc'
+      jPlayer: '.jp'
+      cssSelectorAncestor: '.jpc'
     },
       tracks,
     {

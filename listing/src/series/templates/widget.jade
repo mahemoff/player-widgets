@@ -1,10 +1,10 @@
-prefix = 'http://player.fm/series/e911-talk-podcast-10766/'
-
-#jp
-
-#jpc.jp-audio
+.jp
+.pfm-widget
+  .title= title
+  img(src="http://a1.res.cloudinary.com/playerfm/image/fetch/c_fill,d_graymike-bg.png,h_120,w_120/#{imageURL}")
+.jpc.jp-audio.playerfm-series
   .jp-type-playlist
-    .jp-gui.jp-interface
+    .jp-gui
       .jp-interface
         .jp-progress
           .jp-seek-bar
@@ -34,19 +34,6 @@ prefix = 'http://player.fm/series/e911-talk-podcast-10766/'
               a.jp-volume-max(href='javascript:;', tabindex='1', title='max volume') max volume
           .jp-volume-bar
             .jp-volume-bar-value
-          ul.jp-toggles
-            li
-              a.jp-full-screen(href='javascript:;', tabindex='1', title='full screen') full screen
-            li
-              a.jp-restore-screen(href='javascript:;', tabindex='1', title='restore screen') restore screen
-            li
-              a.jp-shuffle(href='javascript:;', tabindex='1', title='shuffle') shuffle
-            li
-              a.jp-shuffle-off(href='javascript:;', tabindex='1', title='shuffle off') shuffle off
-            li
-              a.jp-repeat(href='javascript:;', tabindex='1', title='repeat') repeat
-            li
-              a.jp-repeat-off(href='javascript:;', tabindex='1', title='repeat off') repeat off
     .jp-playlist
       ul
         // The method Playlist.displayPlaylist() uses this unordered list 
@@ -55,24 +42,3 @@ prefix = 'http://player.fm/series/e911-talk-podcast-10766/'
       span Update Required
       To play the media you will need to either update your browser to a recent version or update your
       a(href='http://get.adobe.com/flashplayer/', target='_blank') Flash plugin
-
-
-//-.jp_container_1
-  .jp-playlist
-    ul
-      li
-
-//-.playerfm-widget
-  .playerfm-title= home
-  img.playerfm-image(src="http://a1.res.cloudinary.com/playerfm/image/fetch/c_fill,d_graymike-bg.png,h_90,w_90/"+imageURL)
-  table.episodes
-    each ep in episodes.slice(0,4)
-      tr.episode
-        td.main
-          a.title(href="#{prefix}#{ep.slug}")= ep.title
-          span.meta
-            span.ago= (Math.ceil(((+new Date)/1000 - ep.publishedAt)/24/60/60))+'d '
-            /
-            span.duration= Math.round(ep.duration/60)+'m'
-        td
-          a.play(href="#{ep.url}") &#9654;
