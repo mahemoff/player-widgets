@@ -1,0 +1,39 @@
+/*
+Syntax error: Invalid variable: "$bg:".
+        on line 2 of sass/config.sass
+
+1: // Background color of the whole widget
+2: $bg: 
+3: 
+4: // Background color of the button backing area. As you can see on the mock, this is actually a gradient, so this variable sets the top color and you'll need to use SASS to ensure it's rendered as a radial gradient, using the color functions to choose a dirtier color for the shadow (as shown in the mock)
+5: $control-bg: 
+6: 
+7: // Background color of the button. Again, this is actually a gradient and will need SASS functions to make it shaded on top.
+
+Backtrace:
+sass/config.sass:2
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:625:in `parse_variable'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:562:in `parse_line'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:471:in `build_tree'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:490:in `block in append_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:489:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:489:in `append_children'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:345:in `_to_tree'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:315:in `_render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/engine.rb:262:in `render'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:341:in `update_stylesheet'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `each'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/sass-3.2.7/lib/sass/plugin/compiler.rb:299:in `block in watch'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/listen-0.7.3/lib/listen/multi_listener.rb:108:in `on_change'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/listen-0.7.3/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/listen-0.7.3/lib/listen/adapters/polling.rb:56:in `call'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/listen-0.7.3/lib/listen/adapters/polling.rb:56:in `poll'
+C:/RailsInstaller/Ruby1.9.3/lib/ruby/gems/1.9.1/gems/listen-0.7.3/lib/listen/adapters/polling.rb:32:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Invalid variable: \"$bg:\".\A         on line 2 of sass/config.sass\A \A 1: // Background color of the whole widget\A 2: $bg: \A 3: \A 4: // Background color of the button backing area. As you can see on the mock, this is actually a gradient, so this variable sets the top color and you'll need to use SASS to ensure it's rendered as a radial gradient, using the color functions to choose a dirtier color for the shadow (as shown in the mock)\A 5: $control-bg: \A 6: \A 7: // Background color of the button. Again, this is actually a gradient and will need SASS functions to make it shaded on top."; }
