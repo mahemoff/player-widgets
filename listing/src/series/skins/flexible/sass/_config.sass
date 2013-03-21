@@ -1,0 +1,68 @@
+@import bourbon/bourbon
+
+// Background color of the whole widget
+$bg: #181817
+
+// Background color of the button backing area. As you can see on the mock, 
+// this is actually a gradient, so this variable sets the top color and you'll 
+// need to use SASS to ensure it's rendered as a radial gradient, using the 
+// color functions to choose a dirtier color for the shadow (as shown in the mock)
+//$control-bg: 
+
+// Background color of the button. Again, this is actually a gradient and will need 
+// SASS functions to make it shaded on top.
+//$button-bg: 
+
+// Background color when hovered. (Again, modified to gradient via SASS functions).
+//$button-hover-bg: 
+
+// Background color when active.  (Again, modified to gradient via SASS functions).
+//$button-active-bg: 
+
+// Color of the button symbol (play button, pause button etc)
+//$button-fg: 
+
+// Color of progress bar on played portion and also text below it. As shown in the 
+// mock, the bar is two colors, so this is the top color and need to use SASS to 
+// darken the bottom color.
+//$progress-fg: 
+
+// Color of progress bar on unplayed portion.
+//$progress-bg: 
+
+// Color of progress bar when buffering. You can use something like Twitter 
+// Bootstrap's progress indicator trick, using masks to make this declarable in CSS.
+//$progress-buffering: 
+
+// Color of volume and symbols. (Note this doesn't have two colors, unlike progress 
+// bar. It just extends out from the left.)
+//$volume-bg: 
+
+// Color of episode items.
+$episode-bg: #101114
+
+// Color of episode text.
+$episode-fg: #FFFFFF
+
+// Color of episode option text
+$episode-option: #CCCCCC
+
+// bg current playing
+$episode-active: #3A3938
+
+// bg when hover
+$episode-hover: #252323
+
+// Other variables:
+// (true or false) Whether to include the thumbnail image above the player.
+$thumbnail: true
+
+// Player width. Empty by default, so width will automatically be 100% (ie the 
+// full-width of the parent element). To support fluid layout, you will need to set 
+// button widths based on percent-values.
+$width: 480px
+
+// If set, overrides the default font and is used as a font-family style for the 
+// whole widget. For the default font, you should use a font from Google Web Fonts 
+// which matches the mock as closely as possible. 
+$font-family: 'Ubuntu Mono', sans-serif

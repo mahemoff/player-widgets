@@ -5,7 +5,8 @@
 
 <title>jPlayerPlaylist: Flexible Skin</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/skin.css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css' />
 <script type="text/javascript" src="../../../../lib/jquery.js"></script>
 <script type="text/javascript" src="../../../../lib/jquery.jplayer.js"></script>
 <script type="text/javascript" src="../../../../lib/jplayer.playlist.js"></script>
@@ -15,7 +16,7 @@ $(document).ready(function(){
 
 	var myPlaylist = new jPlayerPlaylist({
 		jPlayer: "#jquery_jplayer_N",
-		cssSelectorAncestor: "#jp_container_N"
+		cssSelectorAncestor: "#jp_container_N",
 	}, [
 		{
 			title:"Cro Magnon Man",
@@ -514,32 +515,41 @@ $(document).ready(function(){
 						<a href="javascript:;" class="jp-video-play-icon" tabindex="1">play</a>
 					</div>
 					<div class="jp-interface">
-						<div class="jp-progress">
-							<div class="jp-seek-bar">
-								<div class="jp-play-bar"></div>
-							</div>
-						</div>
-						<div class="jp-current-time"></div>
-						<div class="jp-duration"></div>
-						<div class="jp-title">
-							<ul>
-								<li></li>
-							</ul>
-						</div>
+          
+            
 						<div class="jp-controls-holder">
+            
+              <!-- play, pause, mute, prev, next, and etc buttons -->
 							<ul class="jp-controls">
-								<li><a href="javascript:;" class="jp-previous" tabindex="1">previous</a></li>
-								<li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-								<li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-								<li><a href="javascript:;" class="jp-next" tabindex="1">next</a></li>
-								<li><a href="javascript:;" class="jp-stop" tabindex="1">stop</a></li>
-								<li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-								<li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-								<li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>
-							</ul>
+								<li class="jp-previous"><a href="javascript:;" tabindex="1">previous</a></li>
+								<li class="jp-play"><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
+								<li class="jp-stop"><a href="javascript:;" tabindex="1">stop</a></li>
+								<li class="jp-pause"><a href="javascript:;" tabindex="1">pause</a></li>
+								<li class="jp-next"><a href="javascript:;" tabindex="1">next</a></li>
+              </ul>
+
+              <!-- progress bar -->
+              <div class="jp-progress">
+                <div class="jp-seek-bar">
+                  <div class="jp-play-bar"></div>
+                </div>
+              </div>
+              <div class="jp-current-time"></div>
+              <div class="jp-duration"></div>
+  
+  
+              <!-- volume -->
+              <br class="clear" />
 							<div class="jp-volume-bar">
 								<div class="jp-volume-bar-value"></div>
 							</div>
+              <ul class="jp-controls-volume">
+								<li class="jp-mute"><a href="javascript:;" tabindex="1" title="mute">mute</a></li>
+								<li class="jp-unmute"><a href="javascript:;" tabindex="1" title="unmute">unmute</a></li>
+								<li class="jp-volume-max"><a href="javascript:;" tabindex="1" title="max volume">max volume</a></li>
+							</ul>
+              
+              <!-- other options -->
 							<ul class="jp-toggles">
 								<li><a href="javascript:;" class="jp-full-screen" tabindex="1" title="full screen">full screen</a></li>
 								<li><a href="javascript:;" class="jp-restore-screen" tabindex="1" title="restore screen">restore screen</a></li>
@@ -547,6 +557,13 @@ $(document).ready(function(){
 								<li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off">shuffle off</a></li>
 								<li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat">repeat</a></li>
 								<li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off">repeat off</a></li>
+							</ul>
+						</div>
+            
+
+						<div class="jp-title">
+							<ul>
+								<li></li>
 							</ul>
 						</div>
 					</div>
@@ -562,7 +579,8 @@ $(document).ready(function(){
 					To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
 				</div>
 			</div>
-		</div>
+    </div>
+    <br class="clear" />
 			<p style="margin-top:1em;">
 				<code>setPlaylist( <a href="javascript:;" id="playlist-setPlaylist-audio-mix">[Audio Mix]</a> | <a href="javascript:;" id="playlist-setPlaylist-video-mix">[Video Mix]</a> | <a href="javascript:;" id="playlist-setPlaylist-media-mix">[Media Mix]</a> )</code><br />
 

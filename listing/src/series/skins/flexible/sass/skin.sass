@@ -1,2 +1,141 @@
+@import lib
+
+.clear
+  clear: both
+
 .jp-skin
   &.flexible
+    width: $width
+    padding: 15px
+    border: 1px solid transparent
+    border-radius: 15px
+    overflow: hidden
+    background: $bg
+    float: left
+    display: inline
+    clear: both
+    font-family: $font-family
+    +clearfix
+    a:link, a:visited
+      color: #B4B3B5
+      text-decoration: none
+      font-family: $font-family
+    .jp-type-playlist
+      position: relative
+      .jp-jplayer, .jp-gui
+      .jp-jplayer
+        +display_player
+        margin-bottom: 10px
+        img
+          width: 100% !important
+      .jp-gui
+        .jp-interface
+          padding: 14px
+          .jp-progress
+            height: 16px
+            clear: both
+            border-radius: 2px
+            +linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%)
+          .jp-current-time, .jp-duration
+            color: #681F17
+            font-size: 0.8em
+          .jp-current-time
+            float: left
+          .jp-duration
+            float: right
+          .jp-title
+          .jp-controls-holder
+            ul.jp-controls, ul.jp-toggles, ul.jp-controls-volume
+              clear: both
+              border: 1px solid transparent
+              padding: 0
+              float: left
+              width: 100%
+              margin: 4px auto
+              li
+                list-style-type: none
+                float: left
+                text-align: center
+            ul.jp-controls
+              margin-bottom: 15px
+              li
+                &.jp-previous, &.jp-next, &.jp-play, &.jp-stop, &.jp-pause
+                  line-height: 120px
+                  border-radius: 50%
+                  border: 1px solid transparent
+                  +linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%)
+                &.jp-previous, &.jp-next
+                  width: 112px
+                  height: 112px
+                  margin-top: 7px
+                  line-height: 105px
+                &.jp-previous
+                  margin-left: 3%
+                &.jp-next
+                  margin-left: -23px
+                &.jp-play, &.jp-stop, &.jp-pause
+                  width: 127px
+                  height: 127px
+                  margin-left: -20px
+                &.jp-mute
+                  clear: left
+                  margin-right: 5px
+                &.jp-mute, &.jp-unmute, &.jp-volume-max
+                  margin-top: 10px
+            .jp-volume-bar
+              clear: both
+              height: 8px
+              background: #640C00
+              border-radius: 2px
+              margin-top: 5px
+            ul.jp-controls-volume
+              li
+                &.jp-mute, &.jp-unmute
+                  float: left
+                &.jp-mute
+                &.jp-unmute
+                &.jp-volume-max
+                  float: right
+            ul.jp-toggles
+              display: none
+      .jp-playlist
+        clear: both
+        float: left
+        width: 100%
+        ul
+          margin: 0
+          padding: 0
+          width: 100%
+          clear: both
+          float: left
+          li
+            list-style-type: none
+            padding: 8px 15px
+            background: $episode-bg
+            margin: 3px 0
+            div
+              a:link, a:visited
+                color: $episode-fg
+                text-decoration: none
+                font-size: 1.0em
+                letter-spacing: -0.5px
+                font-weight: normal
+              a:hover
+              .jp-playlist-item-remove
+                float: right
+              .jp-playlist-item
+                .jp-artist
+                  font-size: 0.625em
+                  color: $episode-option
+                  font-style: italic
+              .jp-free-media
+                float: right
+                color: $episode-option
+                margin-right: 10px
+                a
+                  font-size: 0.625em
+              .jp-playlist-current
+            &.jp-playlist-current
+              background: $episode-active
+            &:hover
+              background: $episode-hover
