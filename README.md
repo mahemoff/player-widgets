@@ -1,2 +1,1 @@
-player-widgets
-==============
+# Flexible jPlayer Skin
