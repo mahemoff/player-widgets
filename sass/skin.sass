@@ -78,6 +78,10 @@
                     span
                       display: block
                       text-shadow: 0px 2px 3px #CCC
+                  a:hover
+                    +radial-gradient(#D20A11, #981005)
+                    span
+                      text-shadow: none
                 &.jp-previous, &.jp-next
                   width: 112px
                   height: 112px
@@ -109,7 +113,7 @@
                     span
                       font-size: 2.4em
                 &.jp-play
-                  a
+                  a.jp-play
                     span
                       margin: 4px 0 0 6px
                 &.jp-stop
@@ -131,6 +135,9 @@
               background: #640C00
               border-radius: 2px
               margin-top: 5px
+              .jp-volume-bar-value
+                height: inherit
+                background: #7A190C
             ul.jp-controls-volume
               li
                 &.jp-mute, &.jp-unmute

@@ -155,6 +155,16 @@
             .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:visited span {
               display: block;
               text-shadow: 0px 2px 3px #cccccc; }
+          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:hover {
+            background-color: #d20a11;
+            background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #d20a11), color-stop(100%, #981005));
+            background-image: -webkit-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+            background-image: -moz-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+            background-image: -ms-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+            background-image: -o-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+            background-image: radial-gradient(50% 50%, ellipse cover, #d20a11, #981005); }
+            .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:hover span {
+              text-shadow: none; }
         .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next {
           width: 112px;
           height: 112px;
@@ -180,7 +190,7 @@
           margin-left: -20px; }
           .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a span {
             font-size: 2.4em; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a span {
+        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play span {
           margin: 4px 0 0 6px; }
         .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span {
           margin: 4px 0 0 0px; }
@@ -197,6 +207,9 @@
         background: #640c00;
         border-radius: 2px;
         margin-top: 5px; }
+        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder .jp-volume-bar .jp-volume-bar-value {
+          height: inherit;
+          background: #7a190c; }
       .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-mute, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-unmute {
         float: left; }
       .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-volume-max {
