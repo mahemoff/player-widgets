@@ -7,36 +7,44 @@ $bg: #181817
 // this is actually a gradient, so this variable sets the top color and you'll 
 // need to use SASS to ensure it's rendered as a radial gradient, using the 
 // color functions to choose a dirtier color for the shadow (as shown in the mock)
-//$control-bg: 
+=control_bg($top:#F6F6F6, $bottom:#D8D8D8)
+  +linear-gradient(top, $top 0%, $bottom 100%)
 
 // Background color of the button. Again, this is actually a gradient and will need 
 // SASS functions to make it shaded on top.
-//$button-bg: 
+$button-bg: #FFFFFF
 
 // Background color when hovered. (Again, modified to gradient via SASS functions).
-//$button-hover-bg: 
+=button_hover_bg($inner:#D20A11, $outer:#981005)
+  +radial-gradient($inner, $outer)
 
 // Background color when active.  (Again, modified to gradient via SASS functions).
-//$button-active-bg: 
+$button-active-bg: #FFFFFF
 
 // Color of the button symbol (play button, pause button etc)
-//$button-fg: 
+$button-fg: #000000
 
 // Color of progress bar on played portion and also text below it. As shown in the 
 // mock, the bar is two colors, so this is the top color and need to use SASS to 
 // darken the bottom color.
-//$progress-fg: 
+=progress_fg($top:#970b01, $bottom:#750900)
+  +linear-gradient(top, $top 0%, $top 51%, $bottom 51%, $bottom 100%)
 
 // Color of progress bar on unplayed portion.
-//$progress-bg: 
+=progress_bg($top:#5b0b01, $bottom:#4b0900)
+  +linear-gradient(top, $top 0%, $top 51%, $bottom 51%, $bottom 100%)
 
 // Color of progress bar when buffering. You can use something like Twitter 
 // Bootstrap's progress indicator trick, using masks to make this declarable in CSS.
-//$progress-buffering: 
+=progress-buffering($top:#5b0b01, $bottom:#4b0900)
+  +progress_fg($top, $bottom)
 
 // Color of volume and symbols. (Note this doesn't have two colors, unlike progress 
 // bar. It just extends out from the left.)
-//$volume-bg: 
+$volume-bg: #640C00
+
+// Volume level background
+$volume-level-bg: #7A190C
 
 // Color of episode items.
 $episode-bg: #101114
@@ -66,3 +74,7 @@ $width: 480px
 // whole widget. For the default font, you should use a font from Google Web Fonts 
 // which matches the mock as closely as possible. 
 $font-family: 'Abel', 'Ubuntu Mono', sans-serif
+
+// footer
+$powered-by-bg: #5A0A00
+$powered-by-fg: #FFFFFF
