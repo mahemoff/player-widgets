@@ -55,113 +55,119 @@
     </script>
   </head>
   <body>
-    <div class='jp-video jp-video-270p jp-skin flexible' id='jp_container_N'>
-      <div class='jp-type-playlist'>
-        <div class='jp-jplayer' id='jquery_jplayer_N'></div>
-        <div class='jp-gui'>
-          <div class='jp-video-play'>
-            <a class='jp-video-play-icon' href='javascript:;' tabindex='1'>play</a>
-          </div>
-          <div class='jp-interface'>
-            <div class='jp-controls-holder'>
-              <!-- play, pause, mute, prev, next, and etc buttons -->
-              <ul class='jp-controls'>
-                <li class='jp-previous'>
-                  <a href='javascript:;' tabindex='1'>
-                    <span aria-hidden='true' data-icon='&#xe004;'></span>
-                  </a>
-                </li>
-                <li class='jp-play'>
-                  <a class='jp-play' href='javascript:;' tabindex='2'>
-                    <span aria-hidden='true' data-icon='&#xe007;'></span>
-                  </a>
-                </li>
-                <li class='jp-stop'>
-                  <a href='javascript:;' tabindex='3'>
-                    <span aria-hidden='true' data-icon='&#xe005;'></span>
-                  </a>
-                </li>
-                <li class='jp-pause'>
-                  <a href='javascript:;' tabindex='4'>
-                    <span aria-hidden='true' data-icon='&#xe006;'></span>
-                  </a>
-                </li>
-                <li class='jp-next'>
-                  <a href='javascript:;' tabindex='5'>
-                    <span aria-hidden='true' data-icon='&#xe008;'></span>
-                  </a>
-                </li>
-              </ul>
-              <!-- progress bar -->
-              <div class='jp-progress'>
-                <div class='jp-seek-bar'>
-                  <div class='jp-play-bar'></div>
+    <div class='jp-skin-container'>
+      <div class='jp-video jp-video-270p jp-skin flexible' id='jp_container_N'>
+        <div class='jp-type-playlist'>
+          <div class='jp-jplayer' id='jquery_jplayer_N'></div>
+          <div class='jp-gui'>
+            <div class='jp-video-play'>
+              <a class='jp-video-play-icon' href='javascript:;' tabindex='1'>play</a>
+            </div>
+            <div class='jp-interface'>
+              <div class='jp-controls-holder'>
+                <!-- play, pause, mute, prev, next, and etc buttons -->
+                <ul class='jp-controls'>
+                  <li class='jp-previous'>
+                    <a href='javascript:;' tabindex='1'>
+                      <span aria-hidden='true' data-icon='&#xe004;'></span>
+                    </a>
+                  </li>
+                  <li class='jp-play'>
+                    <a class='jp-play' href='javascript:;' tabindex='2'>
+                      <span aria-hidden='true' data-icon='&#xe007;'></span>
+                    </a>
+                  </li>
+                  <li class='jp-stop'>
+                    <a href='javascript:;' tabindex='3'>
+                      <span aria-hidden='true' data-icon='&#xe005;'></span>
+                    </a>
+                  </li>
+                  <li class='jp-pause'>
+                    <a href='javascript:;' tabindex='4'>
+                      <span aria-hidden='true' data-icon='&#xe006;'></span>
+                    </a>
+                  </li>
+                  <li class='jp-next'>
+                    <a href='javascript:;' tabindex='5'>
+                      <span aria-hidden='true' data-icon='&#xe008;'></span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- progress bar -->
+                <div class='jp-progress'>
+                  <div class='jp-seek-bar'>
+                    <div class='jp-play-bar'></div>
+                  </div>
                 </div>
+                <div class='jp-current-time'></div>
+                <div class='jp-duration'></div>
+                <!-- volume -->
+                <br class='clear'>
+                <div class='jp-volume-bar'>
+                  <div class='jp-volume-bar-value'></div>
+                </div>
+                <ul class='jp-controls-volume'>
+                  <li class='jp-mute'>
+                    <a href='javascript:;' tabindex='1' title='mute'>
+                      <span aria-hidden='true' data-icon='&#xe00c;'></span>
+                    </a>
+                  </li>
+                  <li class='jp-unmute'>
+                    <a href='javascript:;' tabindex='1' title='unmute'>
+                      <span aria-hidden='true' data-icon='&#xe00d;'></span>
+                    </a>
+                  </li>
+                  <li class='jp-volume-max'>
+                    <a href='javascript:;' tabindex='1' title='max volume'>
+                      <span aria-hidden='true' data-icon='&#xe009;'></span>
+                    </a>
+                  </li>
+                </ul>
+                <!-- other options -->
+                <ul class='jp-toggles'>
+                  <li>
+                    <a class='jp-full-screen' href='javascript:;' tabindex='1' title='full screen'>full screen</a>
+                  </li>
+                  <li>
+                    <a class='jp-restore-screen' href='javascript:;' tabindex='1' title='restore screen'>restore screen</a>
+                  </li>
+                  <li>
+                    <a class='jp-shuffle' href='javascript:;' tabindex='1' title='shuffle'>shuffle</a>
+                  </li>
+                  <li>
+                    <a class='jp-shuffle-off' href='javascript:;' tabindex='1' title='shuffle off'>shuffle off</a>
+                  </li>
+                  <li>
+                    <a class='jp-repeat' href='javascript:;' tabindex='1' title='repeat'>repeat</a>
+                  </li>
+                  <li>
+                    <a class='jp-repeat-off' href='javascript:;' tabindex='1' title='repeat off'>repeat off</a>
+                  </li>
+                </ul>
               </div>
-              <div class='jp-current-time'></div>
-              <div class='jp-duration'></div>
-              <!-- volume -->
-              <br class='clear'>
-              <div class='jp-volume-bar'>
-                <div class='jp-volume-bar-value'></div>
+              <div class='jp-title'>
+                <ul>
+                  <li></li>
+                </ul>
               </div>
-              <ul class='jp-controls-volume'>
-                <li class='jp-mute'>
-                  <a href='javascript:;' tabindex='1' title='mute'>
-                    <span aria-hidden='true' data-icon='&#xe00c;'></span>
-                  </a>
-                </li>
-                <li class='jp-unmute'>
-                  <a href='javascript:;' tabindex='1' title='unmute'>
-                    <span aria-hidden='true' data-icon='&#xe00d;'></span>
-                  </a>
-                </li>
-                <li class='jp-volume-max'>
-                  <a href='javascript:;' tabindex='1' title='max volume'>
-                    <span aria-hidden='true' data-icon='&#xe009;'></span>
-                  </a>
-                </li>
-              </ul>
-              <!-- other options -->
-              <ul class='jp-toggles'>
-                <li>
-                  <a class='jp-full-screen' href='javascript:;' tabindex='1' title='full screen'>full screen</a>
-                </li>
-                <li>
-                  <a class='jp-restore-screen' href='javascript:;' tabindex='1' title='restore screen'>restore screen</a>
-                </li>
-                <li>
-                  <a class='jp-shuffle' href='javascript:;' tabindex='1' title='shuffle'>shuffle</a>
-                </li>
-                <li>
-                  <a class='jp-shuffle-off' href='javascript:;' tabindex='1' title='shuffle off'>shuffle off</a>
-                </li>
-                <li>
-                  <a class='jp-repeat' href='javascript:;' tabindex='1' title='repeat'>repeat</a>
-                </li>
-                <li>
-                  <a class='jp-repeat-off' href='javascript:;' tabindex='1' title='repeat off'>repeat off</a>
-                </li>
-              </ul>
-            </div>
-            <div class='jp-title'>
-              <ul>
-                <li></li>
-              </ul>
             </div>
           </div>
+          <div class='jp-playlist'>
+            <ul>
+              <!-- The method Playlist.displayPlaylist() uses this unordered list -->
+              <li></li>
+            </ul>
+          </div>
+          <div class='jp-no-solution'>
+            <span>Update Required</span>
+            To play the media you will need to either update your browser to a recent version or update your
+            <a href='http://get.adobe.com/flashplayer/' target='_blank'>Flash plugin</a>.
+          </div>
         </div>
-        <div class='jp-playlist'>
-          <ul>
-            <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-            <li></li>
-          </ul>
-        </div>
-        <div class='jp-no-solution'>
-          <span>Update Required</span>
-          To play the media you will need to either update your browser to a recent version or update your
-          <a href='http://get.adobe.com/flashplayer/' target='_blank'>Flash plugin</a>.
-        </div>
+      </div>
+      <div class='clearfix'></div>
+      <div class='jp-powered-by'>
+        Podcast Widget Powered by Player FM
       </div>
     </div>
   </body>

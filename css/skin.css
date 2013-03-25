@@ -66,107 +66,149 @@
 .icon-volume-decrease:before {
   content: "\e00f"; }
 
-.clear {
-  clear: both; }
-
-.jp-skin.flexible {
+.jp-skin-container {
   width: 480px;
-  padding: 15px;
-  border: 1px solid transparent;
-  border-radius: 15px;
-  overflow: hidden;
-  background: #181817;
   float: left;
-  display: inline;
-  clear: both;
-  font-family: "Abel", "Ubuntu Mono", sans-serif;
-  *zoom: 1; }
-  .jp-skin.flexible:before, .jp-skin.flexible:after {
-    content: " ";
-    display: table; }
-  .jp-skin.flexible:after {
+  font-family: "Abel", "Ubuntu Mono", sans-serif; }
+  .jp-skin-container .clear {
     clear: both; }
-  .jp-skin.flexible a:link, .jp-skin.flexible a:visited {
-    color: #b4b3b5;
-    text-decoration: none;
-    font-family: "Abel", "Ubuntu Mono", sans-serif; }
-  .jp-skin.flexible .jp-type-playlist {
-    position: relative; }
-    .jp-skin.flexible .jp-type-playlist .jp-jplayer {
-      display: block;
-      margin-bottom: 10px; }
-      .jp-skin.flexible .jp-type-playlist .jp-jplayer img {
-        width: 100% !important; }
-    .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface {
-      padding: 14px; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-progress {
-        height: 16px;
-        clear: both;
-        border-radius: 2px;
-        background-color: #5b0b01;
-        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b0b01), color-stop(51%, #5b0b01), color-stop(51%, #4b0900), color-stop(100%, #4b0900));
-        background-image: -webkit-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
-        background-image: -moz-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
-        background-image: -ms-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
-        background-image: -o-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
-        background-image: linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%); }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-progress .jp-seek-bar {
-          height: inherit; }
-          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-progress .jp-seek-bar .jp-play-bar {
-            background-color: #970b01;
-            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #970b01), color-stop(51%, #970b01), color-stop(51%, #750900), color-stop(100%, #750900));
-            background-image: -webkit-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
-            background-image: -moz-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
-            background-image: -ms-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
-            background-image: -o-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
-            background-image: linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
+  .jp-skin-container .jp-skin.flexible {
+    width: inherit;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 15px;
+    overflow: hidden;
+    background: #181817;
+    float: left;
+    display: inline;
+    clear: both;
+    font-family: "Abel", "Ubuntu Mono", sans-serif;
+    position: relative;
+    *zoom: 1; }
+    .jp-skin-container .jp-skin.flexible:before, .jp-skin-container .jp-skin.flexible:after {
+      content: " ";
+      display: table; }
+    .jp-skin-container .jp-skin.flexible:after {
+      clear: both; }
+    .jp-skin-container .jp-skin.flexible a:link, .jp-skin-container .jp-skin.flexible a:visited {
+      color: #b4b3b5;
+      text-decoration: none;
+      font-family: "Abel", "Ubuntu Mono", sans-serif; }
+    .jp-skin-container .jp-skin.flexible .jp-type-playlist {
+      position: relative;
+      float: left;
+      clear: both;
+      width: 100%; }
+      .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-jplayer {
+        display: block;
+        margin-bottom: 10px; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-jplayer img {
+          width: 100% !important; }
+      .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface {
+        padding: 14px; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-progress {
+          height: 16px;
+          clear: both;
+          border-radius: 2px;
+          background-color: #5b0b01;
+          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #5b0b01), color-stop(51%, #5b0b01), color-stop(51%, #4b0900), color-stop(100%, #4b0900));
+          background-image: -webkit-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
+          background-image: -moz-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
+          background-image: -ms-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
+          background-image: -o-linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%);
+          background-image: linear-gradient(top, #5b0b01 0%, #5b0b01 51%, #4b0900 51%, #4b0900 100%); }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-progress .jp-seek-bar {
             height: inherit; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-current-time, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-duration {
-        color: #681f17;
-        font-size: 0.8em; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-current-time {
-        float: left; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-duration {
-        float: right; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-toggles, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume {
-        clear: both;
-        border: 1px solid transparent;
-        padding: 0;
-        float: left;
-        width: 100%;
-        margin: 4px auto; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-toggles li, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li {
-          list-style-type: none;
-          float: left;
-          text-align: center; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls {
-        margin-bottom: 15px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause {
-          line-height: 90px;
-          border-radius: 50%;
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-progress .jp-seek-bar .jp-play-bar {
+              background-color: #970b01;
+              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #970b01), color-stop(51%, #970b01), color-stop(51%, #750900), color-stop(100%, #750900));
+              background-image: -webkit-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
+              background-image: -moz-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
+              background-image: -ms-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
+              background-image: -o-linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
+              background-image: linear-gradient(top, #970b01 0%, #970b01 51%, #750900 51%, #750900 100%);
+              height: inherit; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-current-time, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-duration {
+          color: #681f17;
+          font-size: 0.8em; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-current-time {
+          float: left; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-duration {
+          float: right; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-toggles, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume {
+          clear: both;
           border: 1px solid transparent;
-          background-color: #f6f6f6;
-          background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #d8d8d8));
-          background-image: -webkit-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
-          background-image: -moz-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
-          background-image: -ms-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
-          background-image: -o-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
-          background-image: linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%); }
-          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:link, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:visited, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:link, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:visited, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:link, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:visited {
-            border: 1px solid #cccccc;
-            color: black;
+          padding: 0;
+          float: left;
+          width: 100%;
+          margin: 4px auto; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-toggles li, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li {
+            list-style-type: none;
+            float: left;
+            text-align: center; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls {
+          margin-bottom: 15px; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause {
+            line-height: 90px;
             border-radius: 50%;
-            display: block;
-            width: 70%;
-            height: 70%;
-            margin: 16px;
-            background: white;
-            outline: none;
-            box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3); }
-            .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:visited span {
+            border: 1px solid transparent;
+            background-color: #f6f6f6;
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f6f6), color-stop(100%, #d8d8d8));
+            background-image: -webkit-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
+            background-image: -moz-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
+            background-image: -ms-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
+            background-image: -o-linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%);
+            background-image: linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%); }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:visited, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:visited, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:visited {
+              border: 1px solid #cccccc;
+              color: black;
+              border-radius: 50%;
               display: block;
-              text-shadow: 0px 2px 3px #cccccc; }
-          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:hover, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:hover {
+              width: 70%;
+              height: 70%;
+              margin: 16px;
+              background: white;
+              outline: none;
+              box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.3); }
+              .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:link span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:visited span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:link span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:visited span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:link span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:visited span {
+                display: block;
+                text-shadow: 0px 2px 3px #cccccc; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:hover, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:hover, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:hover, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:hover, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:hover {
+              background-color: #d20a11;
+              background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #d20a11), color-stop(100%, #981005));
+              background-image: -webkit-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+              background-image: -moz-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+              background-image: -ms-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+              background-image: -o-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+              background-image: radial-gradient(50% 50%, ellipse cover, #d20a11, #981005); }
+              .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:hover span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:hover span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:hover span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:hover span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:hover span {
+                text-shadow: none; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next {
+            width: 112px;
+            height: 112px;
+            margin-top: 7px;
+            line-height: 105px; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited {
+              line-height: 75px;
+              width: 67%;
+              height: 67%; }
+              .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited span {
+                font-size: 2.2em; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a span {
+            margin: 3px 0 0 -8px; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a span {
+            margin: 3px 0 0 4px; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous {
+            margin-left: 3%; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next {
+            margin-left: -23px; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause {
+            width: 127px;
+            height: 127px;
+            margin-left: -20px; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a span {
+              font-size: 2.4em; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play {
             background-color: #d20a11;
             background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #d20a11), color-stop(100%, #981005));
             background-image: -webkit-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
@@ -174,98 +216,71 @@
             background-image: -ms-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
             background-image: -o-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
             background-image: radial-gradient(50% 50%, ellipse cover, #d20a11, #981005); }
-            .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a:hover span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a:hover span {
-              text-shadow: none; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next {
-          width: 112px;
-          height: 112px;
-          margin-top: 7px;
-          line-height: 105px; }
-          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited {
-            line-height: 75px;
-            width: 67%;
-            height: 67%; }
-            .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a:visited span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:link span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a:visited span {
-              font-size: 2.2em; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous a span {
-          margin: 3px 0 0 -8px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next a span {
-          margin: 3px 0 0 4px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-previous {
-          margin-left: 3%; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-next {
-          margin-left: -23px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause {
-          width: 127px;
-          height: 127px;
-          margin-left: -20px; }
-          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a span {
-            font-size: 2.4em; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play {
-          background-color: #d20a11;
-          background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #d20a11), color-stop(100%, #981005));
-          background-image: -webkit-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
-          background-image: -moz-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
-          background-image: -ms-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
-          background-image: -o-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
-          background-image: radial-gradient(50% 50%, ellipse cover, #d20a11, #981005); }
-          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play span {
-            margin: 4px 0 0 6px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span {
-          margin: 4px 0 0 0px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a span {
-          margin: 4px 0 0 0; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder .jp-volume-bar {
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play span {
+              margin: 4px 0 0 6px; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span {
+            margin: 4px 0 0 0px; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a span {
+            margin: 4px 0 0 0; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder .jp-volume-bar {
+          clear: both;
+          height: 8px;
+          background: #640c00;
+          border-radius: 2px;
+          margin-top: 5px; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder .jp-volume-bar .jp-volume-bar-value {
+            height: inherit;
+            background: #7a190c; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-mute, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-unmute {
+          float: left; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-volume-max {
+          float: right; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-mute span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-unmute span, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-volume-max span {
+          color: #8a1002; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-toggles {
+          display: none; }
+      .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist {
         clear: both;
-        height: 8px;
-        background: #640c00;
-        border-radius: 2px;
-        margin-top: 5px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder .jp-volume-bar .jp-volume-bar-value {
-          height: inherit;
-          background: #7a190c; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-mute, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-unmute {
-        float: left; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-volume-max {
-        float: right; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-mute span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-unmute span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-volume-max span {
-        color: #8a1002; }
-      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-toggles {
-        display: none; }
-    .jp-skin.flexible .jp-type-playlist .jp-playlist {
-      clear: both;
-      float: left;
-      width: 100%; }
-      .jp-skin.flexible .jp-type-playlist .jp-playlist ul {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        clear: both;
-        float: left; }
-        .jp-skin.flexible .jp-type-playlist .jp-playlist ul li {
-          list-style-type: none;
-          padding: 20px 20px;
-          background: #101114;
-          margin: 3px 0; }
-          .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:link, .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:visited {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5em;
-            letter-spacing: -0.5px;
-            font-weight: normal; }
-          .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item-remove {
-            float: right; }
-          .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item .jp-artist {
-            font-size: 0.625em;
-            color: #cccccc;
-            font-style: italic; }
-          .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-free-media {
-            float: right;
-            color: #cccccc;
-            margin-right: 10px; }
-            .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-free-media a {
-              font-size: 0.625em; }
-          .jp-skin.flexible .jp-type-playlist .jp-playlist ul li.jp-playlist-current {
-            background: #3a3938; }
-          .jp-skin.flexible .jp-type-playlist .jp-playlist ul li:hover {
-            background: #252323; }
+        float: left;
+        width: 100%; }
+        .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul {
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          clear: both;
+          float: left; }
+          .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li {
+            list-style-type: none;
+            padding: 20px 20px;
+            background: #101114;
+            margin: 3px 0; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:visited {
+              color: white;
+              text-decoration: none;
+              font-size: 1.5em;
+              letter-spacing: -0.5px;
+              font-weight: normal; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item-remove {
+              float: right; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item .jp-artist {
+              font-size: 0.625em;
+              color: #cccccc;
+              font-style: italic; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-free-media {
+              float: right;
+              color: #cccccc;
+              margin-right: 10px; }
+              .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-free-media a {
+                font-size: 0.625em; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li.jp-playlist-current {
+              background: #3a3938; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li:hover {
+              background: #252323; }
+  .jp-skin-container .jp-powered-by {
+    float: right;
+    background: #5a0a00;
+    color: white;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px; }
