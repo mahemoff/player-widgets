@@ -60,15 +60,43 @@
               margin-bottom: 15px
               li
                 &.jp-previous, &.jp-next, &.jp-play, &.jp-stop, &.jp-pause
-                  line-height: 120px
+                  line-height: 90px
                   border-radius: 50%
                   border: 1px solid transparent
                   +linear-gradient(top, #f6f6f6 0%, #d8d8d8 100%)
+                  a:link, a:visited
+                    border: 1px solid #CCC
+                    color: #000
+                    border-radius: 50%
+                    display: block
+                    width: 70%
+                    height: 70%
+                    margin: 16px
+                    background: #FFF
+                    outline: none
+                    +box-shadow(0 1px 1px 0px hsla(0, 0%, 0%, 0.30))
+                    span
+                      display: block
+                      text-shadow: 0px 2px 3px #CCC
                 &.jp-previous, &.jp-next
                   width: 112px
                   height: 112px
                   margin-top: 7px
                   line-height: 105px
+                  a:link, a:visited
+                    line-height: 75px
+                    width: 67%
+                    height: 67%
+                    span
+                      font-size: 2.2em
+                &.jp-previous
+                  a
+                    span
+                      margin: 3px 0 0 -8px
+                &.jp-next
+                  a
+                    span
+                      margin: 3px 0 0 4px
                 &.jp-previous
                   margin-left: 3%
                 &.jp-next
@@ -77,6 +105,21 @@
                   width: 127px
                   height: 127px
                   margin-left: -20px
+                  a
+                    span
+                      font-size: 2.4em
+                &.jp-play
+                  a
+                    span
+                      margin: 4px 0 0 6px
+                &.jp-stop
+                  a
+                    span
+                      margin: 4px 0 0 0px
+                &.jp-pause
+                  a
+                    span
+                      margin: 4px 0 0 0
                 &.jp-mute
                   clear: left
                   margin-right: 5px
