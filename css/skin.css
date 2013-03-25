@@ -79,7 +79,7 @@
   float: left;
   display: inline;
   clear: both;
-  font-family: "Ubuntu Mono", sans-serif;
+  font-family: "Abel", "Ubuntu Mono", sans-serif;
   *zoom: 1; }
   .jp-skin.flexible:before, .jp-skin.flexible:after {
     content: " ";
@@ -89,7 +89,7 @@
   .jp-skin.flexible a:link, .jp-skin.flexible a:visited {
     color: #b4b3b5;
     text-decoration: none;
-    font-family: "Ubuntu Mono", sans-serif; }
+    font-family: "Abel", "Ubuntu Mono", sans-serif; }
   .jp-skin.flexible .jp-type-playlist {
     position: relative; }
     .jp-skin.flexible .jp-type-playlist .jp-jplayer {
@@ -201,17 +201,20 @@
           margin-left: -20px; }
           .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a span {
             font-size: 2.4em; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play span {
-          margin: 4px 0 0 6px; }
+        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play {
+          background-color: #d20a11;
+          background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #d20a11), color-stop(100%, #981005));
+          background-image: -webkit-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+          background-image: -moz-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+          background-image: -ms-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+          background-image: -o-radial-gradient(50% 50%, ellipse cover, #d20a11, #981005);
+          background-image: radial-gradient(50% 50%, ellipse cover, #d20a11, #981005); }
+          .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-play a.jp-play span {
+            margin: 4px 0 0 6px; }
         .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-stop a span {
           margin: 4px 0 0 0px; }
         .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-pause a span {
           margin: 4px 0 0 0; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-mute {
-          clear: left;
-          margin-right: 5px; }
-        .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-mute, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-unmute, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls li.jp-volume-max {
-          margin-top: 10px; }
       .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder .jp-volume-bar {
         clear: both;
         height: 8px;
@@ -225,6 +228,8 @@
         float: left; }
       .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-volume-max {
         float: right; }
+      .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-mute span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-unmute span, .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-controls-volume li.jp-volume-max span {
+        color: #8a1002; }
       .jp-skin.flexible .jp-type-playlist .jp-gui .jp-interface .jp-controls-holder ul.jp-toggles {
         display: none; }
     .jp-skin.flexible .jp-type-playlist .jp-playlist {
@@ -239,13 +244,13 @@
         float: left; }
         .jp-skin.flexible .jp-type-playlist .jp-playlist ul li {
           list-style-type: none;
-          padding: 8px 15px;
+          padding: 20px 20px;
           background: #101114;
           margin: 3px 0; }
           .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:link, .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:visited {
             color: white;
             text-decoration: none;
-            font-size: 1em;
+            font-size: 1.5em;
             letter-spacing: -0.5px;
             font-weight: normal; }
           .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item-remove {
