@@ -1,6 +1,6 @@
 # Flexible jPlayer Skin
 
-## Installation
+### Installation
 
 1. Install gem dependencies
 
@@ -13,12 +13,16 @@
 
   `$ cd sass && install bourbon`
 
-## Run / Compiling Sass
+### Run / Compiling Sass
 Compiling Sass file to CSS
 
   `$ sass --watch sass:css`
 
 
-## Running Bash script
+### Running Bash script
 
   `$ ./bash`
+
+
+More likely you'll be playing on sass/_config.sass file if you want to
+change the colorscheme of the player.

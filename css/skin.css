@@ -253,7 +253,6 @@
           float: left; }
           .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li {
             list-style-type: none;
-            padding: 20px 20px;
             background: #101114;
             margin: 3px 0; }
             .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:link, .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div a:visited {
@@ -261,13 +260,17 @@
               text-decoration: none;
               font-size: 1.5em;
               letter-spacing: -0.5px;
-              font-weight: normal; }
+              font-weight: normal;
+              outline: none; }
             .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item-remove {
               float: right; }
-            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item .jp-artist {
-              font-size: 0.625em;
-              color: #cccccc;
-              font-style: italic; }
+            .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item {
+              display: block;
+              padding: 20px; }
+              .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-playlist-item .jp-artist {
+                font-size: 0.625em;
+                color: #cccccc;
+                font-style: italic; }
             .jp-skin-container .jp-skin.flexible .jp-type-playlist .jp-playlist ul li div .jp-free-media {
               float: right;
               color: #cccccc;
