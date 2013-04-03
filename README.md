@@ -11,7 +11,7 @@
 
 2. Install bourbon files
 
-  `$ cd sass && install bourbon`
+  `$ cd sass && bourbon install`
 
 ### Run / Compiling Sass
 Compiling Sass file to CSS
