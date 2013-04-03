@@ -1,7 +1,7 @@
 @import lib
 
 .jp-skin-container
-  width: $width
+  width: #{$width}px
   float: left
   font-family: $font-family
   .clear
@@ -9,9 +9,9 @@
   .jp-skin
     &.flexible
       width: inherit
-      padding: 15px
+      padding: #{$player-padding}px
       border: 1px solid transparent
-      border-radius: 15px
+      border-radius: #{$player-radius}px
       overflow: hidden
       background: $bg
       float: left
@@ -32,11 +32,12 @@
         .jp-jplayer
           +display_player
           margin-bottom: 10px
+          display: none
           img
             width: 100% !important
         .jp-gui
           .jp-interface
-            padding: 14px
+            padding: 0 14px 14px
             .jp-progress
               height: 16px
               clear: both
@@ -71,10 +72,10 @@
                 margin-bottom: 15px
                 li
                   &.jp-previous, &.jp-next, &.jp-play, &.jp-stop, &.jp-pause
-                    line-height: 90px
+                    line-height: #{$big-button-line-height}px
                     border-radius: 50%
-                    //border: 1px solid transparent
                     border: 0
+                    position: relative
                     +control_bg
                     a:link, a:visited
                       color: $button-fg
@@ -84,7 +85,7 @@
                       display: block
                       width: 70%
                       height: 70%
-                      margin: 16px
+                      margin: #{$button-font-margin}px
                       outline: none
                       +box-shadow(0 1px 1px 0px hsla(0, 0%, 0%, 0.30))
                       span
@@ -96,50 +97,48 @@
                       span
                         text-shadow: none
                   &.jp-previous, &.jp-next
-                    width: 112px
-                    height: 112px
-                    margin-top: 7px
+                    width: #{$small-button-size}px
+                    height: #{$small-button-size}px
+                    margin-top: #{$small-button-margin-top}px
                     line-height: 105px
                     a:link, a:visited
-                      line-height: 75px
+                      line-height: #{$small-button-line-height}px
                       width: 67%
                       height: 67%
                       span
-                        font-size: 2.2em
+                        font-size: #{$small-button-font-size}em
                   &.jp-previous
+                    margin-left: #{$prev-margin-left}px
                     a
                       span
-                        margin: 3px 0 0 -8px
+                        margin: 4% 0 0 -10.68%
                   &.jp-next
+                    margin-left: -#{$next-margin-left}px
                     a
                       span
-                        margin: 3px 0 0 4px
-                  &.jp-previous
-                    margin-left: 3%
-                  &.jp-next
-                    margin-left: -21px
+                        margin: 4% 0 0 5.35%
                   &.jp-play, &.jp-stop, &.jp-pause
-                    width: 127px
-                    height: 127px
-                    margin-left: -18px
+                    width: #{$big-button-size}px
+                    height: #{$big-button-size}px
+                    margin-left: -#{$button-margin-left}px
                     a
                       span
-                        font-size: 2.4em
+                        font-size: #{$big-button-font-size}em
                   &.jp-play
+                    z-index: 20
                     a.jp-play
-                      //border: 1px solid transparent
-                      //+button_hover_bg
                       span
                         text-shadow: none
-                        margin: 4px 0 0 6px
+                        margin: 4.5% 0 0 6.75%
                   &.jp-stop
+                    z-index: 15
                     a
                       span
-                        margin: 4px 0 0 0px
+                        margin: 4.5% 0 0 0
                   &.jp-pause
                     a
                       span
-                        margin: 4px 0 0 0
+                        margin: 4.5% 0 0 0
               .jp-volume-bar
                 clear: both
                 height: 8px
@@ -160,6 +159,8 @@
                   &.jp-mute, &.jp-unmute, &.jp-volume-max
                     span
                       color: $volume-bg
+                  a
+                    outline: none
               ul.jp-toggles
                 display: none
         .jp-playlist
@@ -180,7 +181,7 @@
                 a:link, a:visited
                   color: $episode-fg
                   text-decoration: none
-                  font-size: 1.5em
+                  font-size: #{$episode-font-size}px
                   letter-spacing: -0.5px
                   font-weight: normal
                   outline: none
@@ -189,15 +190,16 @@
                   float: right
                 .jp-playlist-item
                   display: block
-                  padding: 20px
+                  padding: #{$episode-padding}px
                   .jp-artist
                     font-size: 0.625em
                     color: $episode-option
-                    font-style: italic
+                    display: none
                 .jp-free-media
                   float: right
                   color: $episode-option
                   margin-right: 10px
+                  display: none
                   a
                     font-size: 0.625em
                 .jp-playlist-current
@@ -205,11 +207,13 @@
                 background: $episode-active
               &:hover
                 background: $episode-hover
+
   .jp-powered-by
     background: $powered-by-bg
     color: $powered-by-fg
     float: right
-    font-size: 13px
-    padding: 5px 10px
-    border-bottom-right-radius: 8px
-    border-bottom-left-radius: 8px
+    font-size: #{$powered-font-size}px
+    padding: #{$powered-padding-h}px #{$powered-padding-v}px
+    border-bottom-right-radius: #{$powered-radius}px
+    border-bottom-left-radius: #{$powered-radius}px
+    margin-left: 5px
