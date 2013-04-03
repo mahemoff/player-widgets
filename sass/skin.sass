@@ -73,7 +73,8 @@
                   &.jp-previous, &.jp-next, &.jp-play, &.jp-stop, &.jp-pause
                     line-height: 90px
                     border-radius: 50%
-                    border: 1px solid transparent
+                    //border: 1px solid transparent
+                    border: 0
                     +control_bg
                     a:link, a:visited
                       color: $button-fg
@@ -116,18 +117,18 @@
                   &.jp-previous
                     margin-left: 3%
                   &.jp-next
-                    margin-left: -23px
+                    margin-left: -21px
                   &.jp-play, &.jp-stop, &.jp-pause
                     width: 127px
                     height: 127px
-                    margin-left: -20px
+                    margin-left: -18px
                     a
                       span
                         font-size: 2.4em
                   &.jp-play
                     a.jp-play
-                      border: 1px solid transparent
-                      +button_hover_bg
+                      //border: 1px solid transparent
+                      //+button_hover_bg
                       span
                         text-shadow: none
                         margin: 4px 0 0 6px
