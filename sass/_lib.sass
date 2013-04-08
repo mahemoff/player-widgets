@@ -1,4 +1,88 @@
-@import config
+//////////////////////////////////////////////////////////////////////
+// Layout calculations based on config                              //
+//////////////////////////////////////////////////////////////////////
+
+// episode font size
+// 480px is the original width of the player
+$orig-width: 480
+
+// maximum jplayer padding is 15px
+$player-padding:    15 * $width / $orig-width
+@if $player-padding > 15
+  $player-padding: 15
+
+// maximum jplayer radius
+$player-radius: 15 * $width / $orig-width
+@if $player-radius > 15
+  $player-radius: 15
+
+// maximum episode font size is 14px
+$episode-font-size: 24 * $width / $orig-width
+@if $episode-font-size < 14
+  $episode-font-size: 14
+$episode-padding:   20 * $width / $orig-width
+
+
+//// buttons
+$default-button-font-margin: 17
+$default-small-button-line-height: 75
+$default-big-button-line-height:  90
+$default-button-margin-left: 17
+$default-next-margin-left: 18
+$i: 220
+@while $i >= $width
+  @if $i >= $width
+    $default-button-font-margin: $default-button-font-margin - 2
+    $default-small-button-line-height: $default-small-button-line-height - 2
+    $default-big-button-line-height: $default-big-button-line-height - 4
+    $default-button-margin-left: $default-button-margin-left - 3
+    $default-next-margin-left: $default-next-margin-left - 2
+  $i: $i - 50
+
+$button-margin-left: $default-button-margin-left * $width / $orig-width
+
+$button-font-margin: $default-button-font-margin * $width / $orig-width
+
+// 112px is the original width of the bigger buttons
+$default-small-button-size: 112
+$i: 220
+@while $i >= $width
+  @if $i >= $width
+    $default-small-button-size: $default-small-button-size - 2
+  $i: $i - 10
+$small-button-size:   floor($default-small-button-size * $width / $orig-width)
+$small-button-font-size:    2.2 * $width / $orig-width
+$small-button-line-height: $default-small-button-line-height * $width / $orig-width
+$small-button-margin-top:     7 * $width / $orig-width
+
+$default-big-button-size: 126
+$i: 220
+@while $i >= $width
+  @if $i >= $width
+    $default-big-button-size: $default-big-button-size - 2
+  $i: $i - 10
+$big-button-size:   floor($default-big-button-size * $width / $orig-width)
+$big-button-font-size:    2.4 * $width / $orig-width
+$big-button-line-height:  $default-big-button-line-height * $width / $orig-width
+
+// minimum margin-left of previous button is 13
+// prev button
+$prev-margin-left:    13 * $width / $orig-width
+@if $prev-margin-left < 13
+  $prev-margin-left: 0 
+
+// next button
+$next-margin-left: $default-next-margin-left * $width / $orig-width
+
+// powered by section
+$powered-font-size: 13 * $width / $orig-width
+@if $powered-font-size < 12
+  $powered-font-size: 12
+$powered-padding-h:  5 * $width / $orig-width
+$powered-padding-v: 10 * $width / $orig-width
+$powered-radius:     8 * $width / $orig-width 
+@if $powered-radius > 8
+  $powered-radius: 8
 
 ////////////
 // Mixins //
