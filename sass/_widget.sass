@@ -34,6 +34,8 @@
           img
             width: 100% !important
         .jp-gui
+          .jp-video-play
+            visibility: hidden
           .jp-interface
             padding: 0 14px 14px
             .jp-progress
@@ -89,7 +91,7 @@
                       +box-shadow(0 1px 1px 0px hsla(0, 0%, 0%, 0.30))
                       span
                         display: block
-                        text-shadow: 0px 2px 3px #CCC
+                        text-shadow: 0px 1px 1px #444
                     a:hover
                       border: 1px solid transparent
                       +button_hover_bg
@@ -111,11 +113,31 @@
                     a
                       span
                         margin: 4% 0 0 -10.68%
+                        &.l, &.r
+                          position: absolute
+                          font-size: 30px
+                          top: 14px
+                        &.l
+                          z-index: 20
+                          left: 42px
+                        &.r
+                          z-index: 10
+                          left: 54px
                   &.jp-next
                     margin-left: -#{$next-margin-left}px
                     a
                       span
                         margin: 4% 0 0 5.35%
+                        &.l, &.r
+                          position: absolute
+                          top: 14px
+                          font-size: 30px
+                        &.l
+                          z-index: 10
+                          left: 30px
+                        &.r
+                          z-index: 20
+                          left: 43px
                   &.jp-play, &.jp-stop, &.jp-pause
                     width: #{$big-button-size}px
                     height: #{$big-button-size}px
@@ -129,15 +151,31 @@
                       span
                         text-shadow: none
                         margin: 4.5% 0 0 6.75%
+                        font-size: 45px
+                        position: absolute
+                        top: 12px
+                        left: 35px
                   &.jp-stop
                     z-index: 15
                     a
                       span
                         margin: 4.5% 0 0 0
+                        font-size: 35px
+                        top: 19px
+                        left: 49px
+                        position: absolute
                   &.jp-pause
                     a
                       span
                         margin: 4.5% 0 0 0
+                        &.l, &.r
+                          position: absolute
+                          font-size: 45px
+                          top: 8px
+                        &.l
+                          left: 40px
+                        &.r
+                          left: 58px
               .jp-volume-bar
                 clear: both
                 height: 8px
