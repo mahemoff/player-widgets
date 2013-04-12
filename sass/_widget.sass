@@ -1,3 +1,7 @@
+@import config
+@import bourbon/bourbon
+@import lib
+
 .jp-skin-container
   width: #{$width}px
   float: left
@@ -26,222 +30,219 @@
         float: left
         clear: both
         width: 100%
-        .jp-jplayer, .jp-gui
-        .jp-jplayer
-          +display_player
-          margin-bottom: 10px
-          display: none
-          img
-            width: 100% !important
-        .jp-gui
-          .jp-video-play
-            visibility: hidden
-          .jp-interface
-            padding: 0 14px 14px
-            .jp-progress
-              cursor: pointer
-              height: 16px
-              clear: both
-              border-radius: 2px
-              +progress_bg
-              .jp-seek-bar
-                height: inherit
-                .jp-play-bar
-                  +progress_fg
-                  height: inherit
-            .jp-current-time, .jp-duration
-              color: $volume-bg
-              font-size: 0.8em
-            .jp-current-time
-              float: left
-            .jp-duration
-              float: right
-            .jp-title
-            .jp-controls-holder
-              ul.jp-controls, ul.jp-toggles, ul.jp-controls-volume
-                clear: both
-                border: 1px solid transparent
-                padding: 0
-                float: left
-                width: 100%
-                margin: 4px auto
-                li
-                  list-style-type: none
-                  float: left
-                  text-align: center
-              ul.jp-controls
-                margin-bottom: 15px
-                li
-                  &.jp-previous, &.jp-next, &.jp-play, &.jp-stop, &.jp-pause
-                    line-height: #{$big-button-line-height}px
-                    border-radius: 50%
-                    border: 0
-                    position: relative
-                    +control_bg
-                    a:link, a:visited
-                      color: $button-fg
-                      background: $button-bg
-                      border: 1px solid #CCC
-                      border-radius: 50%
-                      display: block
-                      width: 70%
-                      height: 70%
-                      margin: #{$button-font-margin}px
-                      outline: none
-                      +box-shadow(0 1px 1px 0px hsla(0, 0%, 0%, 0.30))
-                      span
-                        position: absolute
-                        font-family: Arial
-                        display: block
-                        text-shadow: 0px 1px 1px #444
-                    a:hover
-                      border: 1px solid transparent
-                      +button_hover_bg
-                      span
-                        text-shadow: none
-                  &.jp-previous, &.jp-next
-                    width: #{$small-button-size}px
-                    height: #{$small-button-size}px
-                    margin-top: #{$small-button-margin-top}px
-                    line-height: 105px
-                    a:link, a:visited
-                      line-height: #{$small-button-line-height}px
-                      width: 67%
-                      height: 67%
-                      span
-                        font-size: #{$small-button-font-size}em
-                  &.jp-previous
-                    margin-left: #{$prev-margin-left}px
-                    a
-                      span
-                        margin: 4% 0 0 -10.68%
-                        &.l, &.r
-                          font-size: 30px
-                          top: 14px
-                        &.l
-                          z-index: 20
-                          left: 42px
-                        &.r
-                          z-index: 10
-                          left: 54px
-                  &.jp-next
-                    margin-left: -#{$next-margin-left}px
-                    a
-                      span
-                        margin: 4% 0 0 5.35%
-                        &.l, &.r
-                          top: 14px
-                          font-size: 30px
-                        &.l
-                          z-index: 10
-                          left: 30px
-                        &.r
-                          z-index: 20
-                          left: 43px
-                  &.jp-play, &.jp-stop, &.jp-pause
-                    width: #{$big-button-size}px
-                    height: #{$big-button-size}px
-                    margin-left: -#{$button-margin-left}px
-                    a
-                      span
-                        font-size: #{$big-button-font-size}em
-                  &.jp-play
-                    z-index: 20
-                    a.jp-play
-                      span
-                        text-shadow: none
-                        margin: 4.5% 0 0 6.75%
-                        font-size: 45px
-                        top: 12px
-                        left: 35px
-                  &.jp-stop
-                    z-index: 15
-                    a
-                      span
-                        margin: 4.5% 0 0 0
-                        font-size: 35px
-                        top: 19px
-                        left: 49px
-                  &.jp-pause
-                    a
-                      span
-                        margin: 4.5% 0 0 0
-                        &.l, &.r
-                          font-size: 45px
-                          top: 8px
-                        &.l
-                          left: 40px
-                        &.r
-                          left: 58px
-              .jp-volume-bar
-                clear: both
-                height: 8px
-                background: $volume-bg
-                border-radius: 2px
-                margin-top: 5px
-                .jp-volume-bar-value
-                  cursor: pointer
-                  height: inherit
-                  background: $volume-level-bg
-              ul.jp-controls-volume
-                li
-                  &.jp-mute, &.jp-unmute
-                    float: left
-                  &.jp-mute
-                  &.jp-unmute
-                  &.jp-volume-max
-                    float: right
-                  &.jp-mute, &.jp-unmute, &.jp-volume-max
-                    span
-                      color: $volume-bg
-                  a
-                    outline: none
-              ul.jp-toggles
-                display: none
-        .jp-playlist
+      .jp-jplayer
+        +display_player
+        margin-bottom: 10px
+        display: none
+        img
+          width: 100% !important
+      .jp-video-play
+        visibility: hidden
+      .jp-interface
+        padding: 0 14px 14px
+      .jp-progress
+        cursor: pointer
+        height: 16px
+        clear: both
+        border-radius: 2px
+        +progress_bg
+        .jp-seek-bar
+          height: inherit
+          .jp-play-bar
+            +progress_fg
+            height: inherit
+      .jp-current-time, .jp-duration
+        color: $volume-bg
+        font-size: 0.8em
+      .jp-current-time
+        float: left
+      .jp-duration
+        float: right
+      .jp-title
+      .jp-controls-holder
+        ul
           clear: both
+          border: 1px solid transparent
+          padding: 0
           float: left
           width: 100%
-          ul
-            margin: 0
-            padding: 0
-            width: 100%
-            clear: both
+          margin: 4px auto
+          li
+            list-style-type: none
             float: left
-            li
-              list-style-type: none
-              background: $episode-bg
-              margin: 3px 0
-              div
-                a:link, a:visited
-                  color: $episode-fg
-                  text-decoration: none
-                  font-size: #{$episode-font-size}px
-                  letter-spacing: -0.5px
-                  font-weight: normal
-                  outline: none
-                a:hover
-                .jp-playlist-item-remove
-                  float: right
-                .jp-playlist-item
-                  display: block
-                  padding: #{$episode-padding}px
-                  .jp-artist
-                    font-size: 0.625em
-                    color: $episode-option
-                    display: none
-                .jp-free-media
-                  float: right
+            text-align: center
+      .jp-controls
+        margin-bottom: 15px
+        li
+          line-height: #{$big-button-line-height}px
+          border-radius: 50%
+          border: 0
+          position: relative
+          +control_bg
+          a:link, a:visited
+            color: $button-fg
+            background: $button-bg
+            border: 1px solid #CCC
+            border-radius: 50%
+            display: block
+            width: 70%
+            height: 70%
+            margin: #{$button-font-margin}px
+            outline: none
+            position: relative
+            +box-shadow(0 1px 1px 0px hsla(0, 0%, 0%, 0.30))
+            span
+              position: absolute
+              font-family: Arial
+              display: block
+              text-shadow: 0px 1px 1px #444
+          a:hover, a:focus, a:active
+            border: 1px solid transparent
+            +button_hover_bg
+            span
+              text-shadow: none
+          a .before, a .after
+            content: ""
+            position: absolute
+            left: 0
+          &.jp-previous, &.jp-next
+            width: #{$small-button-size}px
+            height: #{$small-button-size}px
+            margin-top: #{$small-button-margin-top}px
+            line-height: 105px
+            a:link, a:visited
+              line-height: #{$small-button-line-height}px
+              width: 67%
+              height: 67%
+              span
+                font-size: #{$small-button-font-size}em
+          &.jp-previous
+            margin-left: #{$prev-margin-left}px
+            a .before, a .after
+              top: 26px
+              left: 3px
+              border: 5px solid transparent
+              border-width: 12px 17px
+              border-right-color: #000
+              background: transparent
+            a .after
+              left: 17px
+          &.jp-next
+            margin-left: -#{$next-margin-left}px
+            a .before, a .after
+              top: 26px
+              left: 26px
+              border: 5px solid transparent
+              border-width: 12px 17px
+              border-left-color: #000
+              background: transparent
+            a .after
+              left: 39px
+          &.jp-play, &.jp-stop, &.jp-pause
+            width: #{$big-button-size}px
+            height: #{$big-button-size}px
+            margin-left: -#{$button-margin-left}px
+            a
+              span
+                font-size: #{$big-button-font-size}em
+          &.jp-play
+            z-index: 20
+            a.jp-play
+              span
+                text-shadow: none
+                margin: 4.5% 0 0 6.75%
+                font-size: 45px
+                top: 12px
+                left: 35px
+          &.jp-stop
+            z-index: 15
+            a
+              span
+                margin: 4.5% 0 0 0
+                font-size: 35px
+                top: 19px
+                left: 49px
+          &.jp-pause
+            a
+              span
+                margin: 4.5% 0 0 0
+                &.l, &.r
+                  font-size: 45px
+                  top: 8px
+                &.l
+                  left: 40px
+                &.r
+                  left: 58px
+      .jp-volume-bar
+        clear: both
+        height: 8px
+        background: $volume-bg
+        border-radius: 2px
+        margin-top: 5px
+        .jp-volume-bar-value
+          cursor: pointer
+          height: inherit
+          background: $volume-level-bg
+      ul.jp-controls-volume
+        li
+          &.jp-mute, &.jp-unmute
+            float: left
+          &.jp-mute
+            span
+          &.jp-unmute
+          &.jp-volume-max
+            float: right
+          &.jp-mute, &.jp-unmute, &.jp-volume-max
+            span
+              color: $volume-bg
+          a
+            outline: none
+      ul.jp-toggles
+        display: none
+      .jp-playlist
+        clear: both
+        float: left
+        width: 100%
+        ul
+          margin: 0
+          padding: 0
+          width: 100%
+          clear: both
+          float: left
+          li
+            list-style-type: none
+            background: $episode-bg
+            margin: 3px 0
+            div
+              a:link, a:visited
+                color: $episode-fg
+                text-decoration: none
+                font-size: #{$episode-font-size}px
+                letter-spacing: -0.5px
+                font-weight: normal
+                outline: none
+              a:hover
+              .jp-playlist-item-remove
+                float: right
+              .jp-playlist-item
+                display: block
+                padding: #{$episode-padding}px
+                .jp-artist
+                  font-size: 0.625em
                   color: $episode-option
-                  margin-right: 10px
                   display: none
-                  a
-                    font-size: 0.625em
-                .jp-playlist-current
-              &.jp-playlist-current
-                background: $episode-active
-              &:hover
-                background: $episode-hover
+              .jp-free-media
+                float: right
+                color: $episode-option
+                margin-right: 10px
+                display: none
+                a
+                  font-size: 0.625em
+              .jp-playlist-current
+            &.jp-playlist-current
+              background: $episode-active
+            &:hover
+              background: $episode-hover
 
   .jp-powered-by
     background: $powered-by-bg
