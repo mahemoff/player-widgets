@@ -43,6 +43,7 @@ $button-margin-left: $default-button-margin-left * $width / $orig-width
 
 $button-font-margin: $default-button-font-margin * $width / $orig-width
 
+// Small buttons - prev and next
 // 112px is the original width of the bigger buttons
 $default-small-button-size: 112
 $i: 220
@@ -55,7 +56,9 @@ $small-button-font-size:    2.2 * $width / $orig-width
 $small-button-line-height: $default-small-button-line-height * $width / $orig-width
 $small-button-margin-top:     7 * $width / $orig-width
 
-$default-big-button-size: 126
+// Big buttons - play, stop, and pause
+// default: 126
+$default-big-button-size: 123
 $i: 220
 @while $i >= $width
   @if $i >= $width

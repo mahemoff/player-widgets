@@ -63,7 +63,7 @@
           padding: 0
           float: left
           width: 100%
-          margin: -10px auto 10px
+          margin: -3px auto 10px
           +box-sizing(border-box)
           li
             list-style-type: none
@@ -128,7 +128,7 @@
           .after
             left: 19px
         .jp-next
-          left: #{$small-button-size * 3}px
+          left: #{$small-button-size * 3 - 29}px
           //margin-left: -#{$next-margin-left}px
           .before, .after
             left: 29px
@@ -142,14 +142,14 @@
           //margin-left: -#{$button-margin-left}px
         li.jp-play
           z-index: 20
-          left: #{$small-button-size}px
+          left: #{$small-button-size - 16}px
           .before
             top: 30px
             left: 36px
             border-width: 14.5px 24px
             border-left-color: #000
         .jp-pause
-          left: #{$small-button-size}px
+          left: #{$small-button-size - 16}px
           .before, .after
             top: 30px
             left: 30px
@@ -159,7 +159,7 @@
             left: 47px
         .jp-stop
           z-index: 15
-          left: #{$small-button-size * 2}px
+          left: #{$small-button-size * 2 - 24}px
           .before
             top: 30px
             left: 30px
