@@ -8,9 +8,9 @@
   .jp-skin
     &.flexible
       width: inherit
-      padding: #{$player-padding}px
+      padding: #{$player_padding}px
       border: 1px solid transparent
-      border-radius: #{$player-radius}px
+      border-radius: #{$player_radius}px
       overflow: hidden
       background: $bg
       float: left
@@ -73,9 +73,8 @@
         margin-bottom: 15px
         position: relative
         display: block
-        height: #{$big-button-size}px
+        height: #{$big_button_size}px
         li
-          line-height: #{$big-button-line-height}px
           border-radius: 50%
           border: 0
           position: relative
@@ -88,7 +87,7 @@
             display: block
             width: 70%
             height: 70%
-            margin: #{$button-font-margin}px
+            margin: #{$button_icon_margin}px
             outline: none
             position: relative
             +box-shadow(0 1px 1px 0px hsla(0, 0%, 0%, 0.30))
@@ -108,19 +107,18 @@
           position: absolute
           left: 0
         .jp-previous, .jp-next
-          width: #{$small-button-size}px
-          height: #{$small-button-size}px
-          margin-top: #{$small-button-margin-top}px
+          width: #{$small_button_size}px
+          height: #{$small_button_size}px
+          margin-top: #{$small_button_margin_top}px
           line-height: 105px
           a:link, a:visited
-            line-height: #{$small-button-line-height}px
+            line-height: #{$small_button_line_height}px
             width: 67%
             height: 67%
             span
-              font-size: #{$small-button-font-size}em
+              font-size: #{$small_button_font_size}em
         .jp-previous
           left: 0
-          //margin-left: #{$prev-margin-left}px
           .before, .after
             left: 10px
             border-width: 12.5px 13px
@@ -128,8 +126,7 @@
           .after
             left: 19px
         .jp-next
-          left: #{$small-button-size * 3 - 29}px
-          //margin-left: -#{$next-margin-left}px
+          left: #{$small_button_size * 3 - 28}px
           .before, .after
             left: 29px
             border-width: 12.5px 13px
@@ -137,19 +134,18 @@
           .after
             left: 39px
         .jp-play, .jp-stop, .jp-pause
-          width: #{$big-button-size}px
-          height: #{$big-button-size}px
-          //margin-left: -#{$button-margin-left}px
+          width: #{$big_button_size}px
+          height: #{$big_button_size}px
         li.jp-play
           z-index: 20
-          left: #{$small-button-size - 16}px
+          left: #{$small_button_size - 16}px
           .before
             top: 30px
             left: 36px
             border-width: 14.5px 24px
             border-left-color: #000
         .jp-pause
-          left: #{$small-button-size - 16}px
+          left: #{$small_button_size - 16}px
           .before, .after
             top: 30px
             left: 30px
@@ -159,7 +155,7 @@
             left: 47px
         .jp-stop
           z-index: 15
-          left: #{$small-button-size * 2 - 24}px
+          left: #{$small_button_size * 2 - 22}px
           .before
             top: 30px
             left: 30px
@@ -258,7 +254,7 @@
               a:link, a:visited
                 color: $episode-fg
                 text-decoration: none
-                font-size: #{$episode-font-size}px
+                font-size: #{$episode_font_size}px
                 letter-spacing: -0.5px
                 font-weight: normal
                 outline: none
@@ -266,7 +262,7 @@
                 float: right
               .jp-playlist-item
                 display: block
-                padding: #{$episode-padding}px
+                padding: #{$episode_padding}px
                 .jp-artist
                   font-size: 0.625em
                   color: $episode-option
@@ -287,9 +283,9 @@
     background: $powered-by-bg
     color: $powered-by-fg
     float: right
-    font-size: #{$powered-font-size}px
-    padding: #{$powered-padding-h}px #{$powered-padding-v}px
-    border-bottom-right-radius: #{$powered-radius}px
-    border-bottom-left-radius: #{$powered-radius}px
+    font-size: #{$powered_font_size}px
+    padding: #{$powered_padding_h}px #{$powered_padding_v}px
+    border-bottom-right-radius: #{$powered_radius}px
+    border-bottom-left-radius: #{$powered_radius}px
     margin-left: 5px
     margin-right: 15px
