@@ -29,13 +29,15 @@
         clear: both
         width: 100%
       .jp-jplayer
-        +display_player
-        margin-bottom: 10px
+        margin: 0px
         height: 0
+        +display_player
         img
           width: 100% !important
       .jp-video-play
         visibility: hidden
+        a
+          display: none
       .jp-interface
         padding: 0 14px 14px
       .jp-progress
@@ -85,8 +87,8 @@
             border: 1px solid #CCC
             border-radius: 50%
             display: block
-            width: 70%
-            height: 70%
+            width: #{+ratio(86)}px
+            height: #{+ratio(86)}px
             margin: #{$button_icon_margin}px
             outline: none
             position: relative
@@ -112,54 +114,52 @@
           margin-top: #{$small_button_margin_top}px
           line-height: 105px
           a:link, a:visited
-            line-height: #{$small_button_line_height}px
-            width: 67%
-            height: 67%
-            span
-              font-size: #{$small_button_font_size}em
+            width: #{+ratio(73)}px
+            height: #{+ratio(73)}px
         .jp-previous
           left: 0
           .before, .after
-            left: 10px
-            border-width: 12.5px 13px
+            left: #{+ratio(10)}px
+            //border-width: 12.5px 13px
+            border-width: #{$small_button_icon_lr}px #{$small_button_icon_tb}px
             border-right-color: #000
           .after
-            left: 19px
+            left: #{+ratio(19)}px
         .jp-next
-          left: #{$small_button_size * 3 - 28}px
+          left: #{$small_button_size * 3 - 24}px
           .before, .after
-            left: 29px
-            border-width: 12.5px 13px
+            left: #{+ratio(29)}px
+            //border-width: 12.5px 13px
+            border-width: #{$small_button_icon_lr}px #{$small_button_icon_tb}px
             border-left-color: #000
           .after
-            left: 39px
+            left: #{+ratio(39)}px
         .jp-play, .jp-stop, .jp-pause
           width: #{$big_button_size}px
           height: #{$big_button_size}px
+          .before, .after
+            top: #{$big_button_position_top}px
         li.jp-play
           z-index: 20
-          left: #{$small_button_size - 16}px
+          left: #{$small_button_size - +ratio(16)}px
           .before
-            top: 30px
-            left: 36px
-            border-width: 14.5px 24px
+            left: #{+ratio(36)}px
+            border-width: #{+ratio(14.5)}px #{+ratio(24)}px
             border-left-color: #000
         .jp-pause
-          left: #{$small_button_size - 16}px
+          left: #{$small_button_size - +ratio(16)}px
           .before, .after
-            top: 30px
-            left: 30px
-            border-width: 14.5px 6px
+            left: #{+ratio(30)}px
+            border-width: #{$pause_icon_tb}px #{$pause_icon_lr}px
             border-color: #000
           .after
-            left: 47px
+            left: #{+ratio(47)}px
         .jp-stop
           z-index: 15
-          left: #{$small_button_size * 2 - 22}px
+          left: #{$small_button_size * 2 - 20}px
           .before
-            top: 30px
-            left: 30px
-            border-width: 14.5px 14.5px
+            left: #{+ratio(30)}px
+            border-width: #{+ratio(14.5)}px #{+ratio(14.5)}px
             border-color: #000
       .jp-volume-bar
         clear: both

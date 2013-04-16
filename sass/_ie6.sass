@@ -1,0 +1,37 @@
+html.ie6
+  .jp-skin-container
+    .jp-skin
+      &.flexible
+        .jp-controls
+          .jp-previous
+            .before, .after
+              +ie6Transparency
+              border-right-color: #000
+          .jp-next
+            .before, .after
+              +ie6Transparency
+              border-left-color: #000
+          li.jp-play
+            .before
+              +ie6Transparency
+              border-left-color: #000
+          li.jp-stop
+            .before
+              +ie6Transparency
+              border-color: #000
+          .jp-pause
+            .before, .after
+              +ie6Transparency
+              border-color: #000           
+        ul.jp-controls-volume
+          a
+            .before
+              +ie6Transparency
+              border-right-color: $volume-bg
+            .after
+              +ie6Transparency
+              border-color: $volume-bg
+          .wave
+            line-height: 0
+            display: block
+            overflow: hidden

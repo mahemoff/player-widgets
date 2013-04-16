@@ -1,3 +1,5 @@
+@import config
+
 //////////////////////////////////////////////////////////////////////
 /// Functions and Mixins                                           ///
 //////////////////////////////////////////////////////////////////////
@@ -14,6 +16,14 @@
   @if $num < $min
     @return $min
   @return $num
+
+=ie6Transparency
+  border-color: pink
+  filter: chroma(color=pink)
+  line-height: 0
+  height: 0
+  display: block
+  overflow: hidden
 
 =display_player
   @if $thumbnail
@@ -36,12 +46,11 @@
 // Base width
 $base_width: 480
 
-// jPlayer Padding
+$_small_button_size: 110
+
+// jPlayer Padding and Radius
 // max: 15px
 $player_padding: setMax(ratio(50), 15)
-
-// jPlayer Radius
-// max: 15px
 $player_radius: setMax(ratio(15), 15)
 
 // Episode Font Size
@@ -53,13 +62,16 @@ $episode_padding: ratio(20)
 $button_icon_margin: ratio(17)
 
 // Small buttons - prev and next
-$small_button_size: floor(ratio(110))
-$small_button_font_size: ratio(2.2)
-$small_button_line_height: ratio(75)
+$small_button_size: floor(ratio($_small_button_size))
+$small_button_icon_tb: ratio(12.5) 
+$small_button_icon_lr: ratio(13)
 $small_button_margin_top: ratio(7)
 
+// Big buttons - play, pause, and stop
 $big_button_size: floor(ratio(123))
-
+$big_button_position_top: ratio(30)
+$pause_icon_tb: ratio(14.5)
+$pause_icon_lr: ratio(6)
 
 // "Powered by" section
 $powered_font_size: setMin(ratio(13), 12)
@@ -71,4 +83,4 @@ $powered_radius: setMax(ratio(8), 8)
 ////////////////
 // Typography //
 ////////////////
-@import url(http://fonts.googleapis.com/css?family=Abel|Ubuntu+Mono)
+@import url(http://fonts.googleapis.com/css?family=Abel)
