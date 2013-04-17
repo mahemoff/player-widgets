@@ -8,7 +8,7 @@
   .jp-skin
     &.flexible
       width: inherit
-      padding: #{$player_padding}px
+      padding: #{$player_padding_tb}px #{$player_padding_lr}px
       border: 1px solid transparent
       border-radius: #{$player_radius}px
       overflow: hidden
@@ -39,7 +39,7 @@
         a
           display: none
       .jp-interface
-        padding: 0 14px 14px
+        padding: 0 #{$jp_interface_padding}px #{$jp_interface_padding}px
       .jp-progress
         cursor: pointer
         height: 16px
@@ -53,7 +53,7 @@
             height: inherit
       .jp-current-time, .jp-duration
         color: $volume-bg
-        font-size: 0.8em
+        font-size: #{+setMin(ratio(13), 12)}px
       .jp-current-time
         float: left
       .jp-duration
@@ -65,14 +65,15 @@
           padding: 0
           float: left
           width: 100%
-          margin: -3px auto 10px
+          margin-top: -3px
+          margin-left: #{$control_button_left_margin}px
+          margin-bottom: 10px
           +box-sizing(border-box)
           li
             list-style-type: none
             float: left
             text-align: center
       .jp-controls
-        margin-bottom: 15px
         position: relative
         display: block
         height: #{$big_button_size}px
@@ -99,7 +100,7 @@
           .before, .after
             content: ""
             position: absolute
-            top: 26px
+            top: #{+ratio(26)}px
             left: 0
             border: solid transparent
             background: transparent
@@ -117,19 +118,17 @@
             width: #{+ratio(73)}px
             height: #{+ratio(73)}px
         .jp-previous
-          left: 0
+          left: -1px
           .before, .after
             left: #{+ratio(10)}px
-            //border-width: 12.5px 13px
             border-width: #{$small_button_icon_lr}px #{$small_button_icon_tb}px
             border-right-color: #000
           .after
             left: #{+ratio(19)}px
         .jp-next
-          left: #{$small_button_size * 3 - 24}px
+          left: #{$small_button_size * 3 - +ratio(24)}px
           .before, .after
             left: #{+ratio(29)}px
-            //border-width: 12.5px 13px
             border-width: #{$small_button_icon_lr}px #{$small_button_icon_tb}px
             border-left-color: #000
           .after
@@ -141,13 +140,13 @@
             top: #{$big_button_position_top}px
         li.jp-play
           z-index: 20
-          left: #{$small_button_size - +ratio(16)}px
+          left: #{$small_button_size - +ratio(17)}px
           .before
             left: #{+ratio(36)}px
             border-width: #{+ratio(14.5)}px #{+ratio(24)}px
             border-left-color: #000
         .jp-pause
-          left: #{$small_button_size - +ratio(16)}px
+          left: #{$small_button_size - +ratio(17)}px
           .before, .after
             left: #{+ratio(30)}px
             border-width: #{$pause_icon_tb}px #{$pause_icon_lr}px
@@ -156,12 +155,13 @@
             left: #{+ratio(47)}px
         .jp-stop
           z-index: 15
-          left: #{$small_button_size * 2 - 20}px
+          left: #{$small_button_size * 2 - +ratio(20)}px
           .before
             left: #{+ratio(30)}px
             border-width: #{+ratio(14.5)}px #{+ratio(14.5)}px
             border-color: #000
       .jp-volume-bar
+        cursor: pointer
         clear: both
         height: 8px
         background: $volume-bg

@@ -29,7 +29,7 @@
   @if $thumbnail
     display: block
   @else
-    display: none
+    display: no$player_padding_lrne
 
 =webfont($family, $file)
   @font-face
@@ -49,8 +49,22 @@ $base_width: 480
 $_small_button_size: 110
 
 // jPlayer Padding and Radius
-// max: 15px
-$player_padding: setMax(ratio(50), 15)
+$player_padding_tb: setMax(ratio(50), 15)
+@if $width <= 100
+  $player_padding_tb: setMax(ratio(50), 8)
+@else if $width >= 140 and $width <= 300
+  $player_padding_tb: setMax(ratio(50), 10)
+
+$player_padding_lr: setMax(ratio(50), 15)
+@if $width <= 100
+  $player_padding_lr: setMax(ratio(50), 3)
+@else if $width >= 140 and $width < 180
+  $player_padding_lr: setMax(ratio(50), 5)
+@else if $width >= 180 and $width <= 200
+  $player_padding_lr: setMax(ratio(50), 7)
+@else if $width > 200 and $width <= 300
+  $player_padding_lr: setMax(ratio(50), 10)
+
 $player_radius: setMax(ratio(15), 15)
 
 // Episode Font Size
@@ -60,6 +74,8 @@ $episode_padding: ratio(20)
 
 // Control Button
 $button_icon_margin: ratio(17)
+@if $width <= 100
+  $button_icon_margin: 2
 
 // Small buttons - prev and next
 $small_button_size: floor(ratio($_small_button_size))
@@ -72,6 +88,18 @@ $big_button_size: floor(ratio(123))
 $big_button_position_top: ratio(30)
 $pause_icon_tb: ratio(14.5)
 $pause_icon_lr: ratio(6)
+
+// Buttons length
+$control_button_left_margin: 0
+@if $width == 500
+  $control_button_left_margin: 3px
+@if $width >= 550
+  $control_button_left_margin: ($width - (($small_button_size * 2) + ($big_button_size * 2))) / 2
+
+// progress and volume bar
+$jp_interface_padding: +ratio(14)
+$bar_width: $width - ($player_padding_lr * 2) - ($jp_interface_padding * 2)
+$jp_playlist_width: $width - ($player_padding_lr * 2)
 
 // "Powered by" section
 $powered_font_size: setMin(ratio(13), 12)

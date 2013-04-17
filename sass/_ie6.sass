@@ -2,7 +2,9 @@ html.ie6
   .jp-skin-container
     .jp-skin
       &.flexible
-        .jp-controls
+        border: 1px solid $bg
+        ul.jp-controls
+          border: 1px solid $bg
           .jp-previous
             .before, .after
               +ie6Transparency
@@ -22,8 +24,13 @@ html.ie6
           .jp-pause
             .before, .after
               +ie6Transparency
-              border-color: #000           
+              border-color: #000
+        .jp-progress
+          overflow: hidden
         ul.jp-controls-volume
+          border: 1px solid $bg
+          .jp-volume-max
+            margin-right: 8px
           a
             .before
               +ie6Transparency
@@ -35,3 +42,12 @@ html.ie6
             line-height: 0
             display: block
             overflow: hidden
+        .jp-volume-bar
+          line-height: 0
+          overflow: hidden
+        .jp-playlist
+          ul
+            li
+              display: inline
+              zoom: 1
+              width: 100%
