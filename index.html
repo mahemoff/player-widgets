@@ -17,21 +17,22 @@
     <script>
       (function() {
         jQuery(document).ready(function() {
-          var myPlaylist;
+          var myPlaylist, setPlayerScreen;
       
           myPlaylist = void 0;
-          return myPlaylist = new jPlayerPlaylist({
+          myPlaylist = new jPlayerPlaylist({
             jPlayer: "#jquery_jplayer_N",
             cssSelectorAncestor: "#jp_container_N"
           }, [
             {
               title: "The Big Web Show 88: Greg Storey",
               mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-088.mp3",
-              poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
+              poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png",
+              link: "http://5by5.tv/bigwebshow"
             }, {
               title: "The Big Web Show 87: Anthony Casalena",
               mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-087.mp3",
-              poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x369.png"
+              poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
             }, {
               title: "The Big Web Show 86: Greg Storey",
               mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-086.mp3"
@@ -52,6 +53,25 @@
             solution: "html, flash",
             wmode: "windows"
           });
+          setPlayerScreen = function(obj) {
+            jQuery('.jp-publisher').attr('href', obj.link || "javascript:;");
+            jQuery('.jp-global-title').html(obj.title || jQuery('.jp-global-title').css('content'));
+            return jQuery('.jp-global-poster').attr('src', obj.poster || jQuery('.jp-publisher').css('content').replace(/'/g, ""));
+          };
+          jQuery(myPlaylist.cssSelector.jPlayer).bind(jQuery.jPlayer.event.ready, function(event) {
+            return jQuery.each(myPlaylist.playlist, function(index, obj) {
+              if (index === 0) {
+                return setPlayerScreen(obj);
+              }
+            });
+          });
+          return jQuery(myPlaylist.cssSelector.jPlayer).bind(jQuery.jPlayer.event.play, function(event) {
+            return jQuery.each(myPlaylist.playlist, function(index, obj) {
+              if (index === myPlaylist.current) {
+                return setPlayerScreen(obj);
+              }
+            });
+          });
         });
       
       }).call(this);
@@ -62,15 +82,17 @@
       <div class='jp-video jp-video-270p jp-skin flexible' id='jp_container_N'>
         <div class='jp-type-playlist'>
           <div class='jp-jplayer' id='jquery_jplayer_N'></div>
+          <div class='jp-publisher-container'>
+            <a class='jp-publisher' href='javascript:;' target='_blank'>
+              <img alt='' class='jp-global-poster' src=''>
+            </a>
+            <div class='jp-global-title'></div>
+          </div>
           <div class='jp-gui'>
             <div class='jp-video-play'>
               <a class='jp-video-play-icon' href='javascript:;' tabindex='1'>play</a>
             </div>
             <div class='jp-interface'>
-              <a class='jp-publisher' href='http://5by5.tv/bigwebshow' target='_blank'>
-                <img class='jp-global-poster' src='http://res.cloudinary.com/playerfm/image/fetch/d_graymike-bg.png,c_fill,h_270,w_270/http://icebox.5by5.tv/images/broadcasts/7/cover.jpg'>
-              </a>
-              <div class='jp-global-title'>The Big Web Show</div>
               <div class='jp-controls-holder'>
                 <!-- play, pause, mute, prev, next, and etc buttons -->
                 <ul class='jp-controls'>
