@@ -23,7 +23,7 @@ Compiling Sass file to CSS
 
   `$ ./bash`
 
-### HTML Mark
+### HTML
 
 You should add the ff code at the top of your HTML code so that it will work on lower version of ie.
 
