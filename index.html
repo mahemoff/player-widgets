@@ -11,82 +11,17 @@
     <title>jPlayerPlaylist: Flexible Skin</title>
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
     <link href='css/skin.css' rel='stylesheet' type='text/css'>
-    <script src='js/jquery.js' type='text/javascript'></script>
-    <script src='js/jquery.jplayer.js' type='text/javascript'></script>
-    <script src='js/jplayer.playlist.js' type='text/javascript'></script>
-    <script>
-      (function() {
-        jQuery(document).ready(function() {
-          var myPlaylist, setPlayerScreen;
-      
-          myPlaylist = void 0;
-          myPlaylist = new jPlayerPlaylist({
-            jPlayer: "#jquery_jplayer_N",
-            cssSelectorAncestor: "#jp_container_N"
-          }, [
-            {
-              title: "The Big Web Show 88: Greg Storey",
-              mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-088.mp3",
-              poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png",
-              link: "http://5by5.tv/bigwebshow"
-            }, {
-              title: "The Big Web Show 87: Anthony Casalena",
-              mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-087.mp3",
-              poster: "http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png"
-            }, {
-              title: "The Big Web Show 86: Greg Storey",
-              mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-086.mp3"
-            }, {
-              title: "The Big Web Show 85: Greg Storey",
-              mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-085.mp3"
-            }, {
-              title: "The Big Web Show 84: Greg Storey",
-              mp3: "http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-084.mp3",
-              poster: "http://www.jplayer.org/audio/poster/Miaow_640x360.png"
-            }
-          ], {
-            playlistOptions: {
-              enableRemoveControls: false
-            },
-            swfPath: "js",
-            supplied: "mp3",
-            solution: "html, flash",
-            wmode: "windows"
-          });
-          setPlayerScreen = function(obj) {
-            jQuery('.jp-publisher').attr('href', obj.link || "javascript:;");
-            jQuery('.jp-global-title').html(obj.title || jQuery('.jp-global-title').css('content'));
-            return jQuery('.jp-global-poster').attr('src', obj.poster || jQuery('.jp-publisher').css('content').replace(/'/g, ""));
-          };
-          jQuery(myPlaylist.cssSelector.jPlayer).bind(jQuery.jPlayer.event.ready, function(event) {
-            return jQuery.each(myPlaylist.playlist, function(index, obj) {
-              if (index === 0) {
-                return setPlayerScreen(obj);
-              }
-            });
-          });
-          return jQuery(myPlaylist.cssSelector.jPlayer).bind(jQuery.jPlayer.event.play, function(event) {
-            return jQuery.each(myPlaylist.playlist, function(index, obj) {
-              if (index === myPlaylist.current) {
-                return setPlayerScreen(obj);
-              }
-            });
-          });
-        });
-      
-      }).call(this);
-    </script>
   </head>
   <body>
     <div class='jp-skin-container'>
       <div class='jp-video jp-video-270p jp-skin flexible' id='jp_container_N'>
         <div class='jp-type-playlist'>
-          <div class='jp-jplayer' id='jquery_jplayer_N'></div>
+          <div class='jp-jplayer playerfm' id='jquery_jplayer_N'></div>
           <div class='jp-publisher-container'>
-            <a class='jp-publisher' href='javascript:;' target='_blank'>
-              <img alt='' class='jp-global-poster' src=''>
+            <a class='jp-publisher' href='http://5by5.tv/bigwebshow' target='_blank'>
+              <img alt='' class='jp-global-poster' src='http://res.cloudinary.com/playerfm/image/fetch/d_graymike-bg.png,c_fill,h_270,w_270/http://icebox.5by5.tv/images/broadcasts/7/cover.jpg'>
             </a>
-            <div class='jp-global-title'></div>
+            <div class='jp-global-title'>Traffic and Weather</div>
           </div>
           <div class='jp-gui'>
             <div class='jp-video-play'>
@@ -184,17 +119,20 @@
                   </li>
                 </ul>
               </div>
-              <div class='jp-title'>
-                <ul>
-                  <li></li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class='jp-playlist'>
-            <ul>
-              <!-- The method Playlist.displayPlaylist() uses this unordered list -->
-              <li></li>
+            <ul style='display: block;'>
+              <li class='jp-playlist-current'>
+                <div>
+                  <a class='jp-playlist-item' data-poster='http://www.jplayer.org/audio/poster/The_Stark_Palace_640x360.png' data-url='http://5by5.tv/bigwebshow' href='http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-088.mp3'>The Big Web Show 88: Greg Storey</a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <a class='jp-playlist-item' data-poster='' data-url='' href='http://d.ahoy.co/redirect.mp3/fly.5by5.tv/audio/broadcasts/bigwebshow/2013/bigwebshow-088.mp3'>This is a very loooooooong text. Test 1000000001</a>
+                </div>
+              </li>
             </ul>
           </div>
           <div class='jp-no-solution'>
@@ -209,5 +147,9 @@
         Podcast Widget Powered by Player FM
       </div>
     </div>
+    <script src='js/jquery.js' type='text/javascript'></script>
+    <script src='js/jquery.jplayer.js' type='text/javascript'></script>
+    <script src='js/jplayer.playlist.js' type='text/javascript'></script>
+    <script src='js/playerfm.js' type='text/javascript'></script>
   </body>
 </html>

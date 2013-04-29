@@ -29,10 +29,14 @@
           text-decoration: underline
       .jp-global-title
         text-align: center
-        color: white
+        color: $title-fg
         font-size: 1.5em
         margin: 10px 0
         content: $global-title
+        text-overflow: ellipsis
+        overflow: hidden
+        white-space: nowrap
+        width: 100%
       .jp-global-poster
         width: 100%
       .jp-type-playlist
@@ -106,7 +110,7 @@
             outline: none
             position: relative
             +box-shadow(0 1px 1px 0px hsla(0, 0%, 0%, 0.30))
-          a:hover, a:focus, a:active
+          a:hover
             border: 1px solid transparent
             +button_hover_bg
           .before, .after
@@ -270,6 +274,9 @@
                 letter-spacing: -0.5px
                 font-weight: normal
                 outline: none
+                white-space: nowrap
+                text-overflow: ellipsis
+                overflow: hidden
               .jp-playlist-item-remove
                 float: right
               .jp-playlist-item
